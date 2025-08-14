@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff7a18"/>
+      <stop offset="1" stop-color="#ffb24a"/>
+    </linearGradient>
+    <filter id="s" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect rx="40" ry="40" width="256" height="256" fill="#0d0f14"/>
+  <g filter="url(#s)">
+    <path d="M128 36c28 18 46 33 56 64-7 7-20 10-28 9 3-12-3-23-15-28 4 13-5 24-13 28-8-4-17-15-13-28-12 5-18 16-15 28-8 1-21-2-28-9 10-31 28-46 56-64z" fill="url(#g)"/>
+    <path d="M76 116c8 10 22 18 36 20-3 9-8 19-16 26-10-7-17-22-20-46z" fill="#f3f4f6"/>
+    <path d="M180 116c-8 10-22 18-36 20 3 9 8 19 16 26 10-7 17-22 20-46z" fill="#f3f4f6"/>
+    <circle cx="104" cy="112" r="6" fill="#0d0f14"/>
+    <circle cx="152" cy="112" r="6" fill="#0d0f14"/>
+    <path d="M128 144c10 0 18-4 24-8-5 16-14 30-24 30s-19-14-24-30c6 4 14 8 24 8z" fill="#ffd7a3"/>
+  </g>
+  <text x="128" y="232" font-family="Inter,Segoe UI,Arial" font-size="28" text-anchor="middle" fill="#ffb24a">$SFOX</text>
+</svg>

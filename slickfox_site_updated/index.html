@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$SFOX — SlickFoxToken | The Fox Runs the Forest</title>
+  <meta name="description" content="$SFOX (SlickFoxToken) — a meme-fueled community token on Solana. Zero Tax • Anti-Bot • 15% Creator Fee Share. Join the Fox Den." />
+  <meta property="og:title" content="$SFOX — SlickFoxToken" />
+  <meta property="og:description" content="Zero Tax • Anti-Bot • 15% Creator Fee Share. Join the Fox Den." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/sfox-logo.svg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <meta name="theme-color" content="#0d0f14" />
+  <style>
+    :root{{--bg:#0d0f14;--card:#12161d;--muted:#9aa4b2;--text:#eef2f7;--accent:#ff7a18;--accent2:#ffb24a;--line:#202632;--shadow:0 10px 30px rgba(0,0,0,.35);--r:16px;--rsm:10px;--max:1100px}}
+    *{{box-sizing:border-box}} html,body{{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}}
+    a{{color:#60a5fa;text-decoration:none}}
+    img{{max-width:100%;display:block}}
+    .container{{max-width:var(--max);margin:0 auto;padding:0 20px}}
+    header{{position:sticky;top:0;z-index:40;background:rgba(13,15,20,.7);backdrop-filter:blur(8px) saturate(140%);border-bottom:1px solid var(--line)}}
+    .nav{{display:flex;align-items:center;justify-content:space-between;padding:14px 0}}
+    .brand{{display:flex;align-items:center;gap:.75rem}}
+    .brand img{{width:40px;height:40px;border-radius:12px;border:1px solid var(--line)}}
+    .brand span{{font-weight:800;letter-spacing:.2px}}
+    .btn{{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#0d0f14;border:none;border-radius:12px;padding:.7rem 1rem;font-weight:800;box-shadow:var(--shadow);cursor:pointer;transition:transform .08s,filter .2s}}
+    .btn:hover{{filter:brightness(1.05)}} .btn:active{{transform:translateY(1px)}}
+    .btn.outline{{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}}
+    .hero{{padding:72px 0 40px;background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(255,122,24,.18), transparent 40%),
+      radial-gradient(900px 500px at 100% 0%, rgba(255,178,74,.15), transparent 50%)}}
+    .hero-grid{{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}}
+    .pill{{display:inline-flex;gap:.5rem;align-items:center;background:linear-gradient(90deg, rgba(255,122,24,.15), rgba(255,178,74,.15)); color:var(--accent2); border:1px solid rgba(255,122,24,.25); padding:.35rem .75rem;border-radius:999px;font-weight:700}}
+    h1{{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:.2rem 0 1rem}}
+    .lead{{color:var(--muted);max-width:60ch}}
+    .cta-row{{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.2rem}}
+    .badge-row{{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}}
+    .stat{{background:var(--card);border:1px solid var(--line);padding:.6rem .8rem;border-radius:10px;font-weight:700}}
+    .hero-card{{background:linear-gradient(180deg, rgba(32,38,50,.6), rgba(18,22,29,.92));border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}}
+    .hero-card .logo{{width:88px;height:88px;border-radius:20px;border:1px solid var(--line);object-fit:cover;margin-bottom:12px}}
+    @media (max-width:900px){{.hero-grid{{grid-template-columns:1fr}} .hero-card{{order:-1}} }}
+    section{{padding:64px 0;border-top:1px solid var(--line)}}
+    h2{{font-size:clamp(22px,3.6vw,34px);margin:0 0 10px}}
+    .sub{{color:var(--muted);margin:0 0 28px}}
+    .grid-3{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}}
+    .card{{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}}
+    .tok-table{{width:100%;border-collapse:separate;border-spacing:0 8px}}
+    .tok-table tr{{background:var(--card)}} .tok-table td{{padding:14px 16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}}
+    .tok-table tr td:first-child{{border-left:1px solid var(--line);border-radius:10px 0 0 10px}}
+    .tok-table tr td:last-child{{border-right:1px solid var(--line);border-radius:0 10px 10px 0;text-align:right;font-weight:800}}
+    .steps{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}}
+    .step{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}}
+    .step .num{{display:inline-grid;place-items:center;background:rgba(255,122,24,.16);color:var(--accent);width:28px;height:28px;border-radius:8px;font-weight:800;margin-right:8px}}
+    @media (max-width:960px){{ .steps{{grid-template-columns:1fr 1fr}} }}
+    @media (max-width:560px){{ .steps{{grid-template-columns:1fr}} }}
+    .road{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}} .milestone{{border-left:3px solid var(--accent);padding:14px 16px;background:var(--card);border-radius:10px}}
+    .milestone.done{{border-color:#22c55e}} @media (max-width:900px){{ .road{{grid-template-columns:1fr}} }}
+    details{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}} details+details{{margin-top:10px}}
+    footer{{padding:40px 0;background:#0b0d12;border-top:1px solid var(--line);color:var(--muted)}}
+    .foot{{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}}
+    .socials{{display:flex;gap:10px}}
+    .chip{{background:#151922;border:1px solid var(--line);color:var(--text);padding:.5rem .7rem;border-radius:10px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/sfox-logo.svg" alt="$SFOX logo" />
+        <span>$SFOX • SlickFoxToken</span>
+      </div>
+      <div class="nav-actions">
+        <a class="btn outline" href="https://x.com/SlickFoxToken" target="_blank" rel="noopener">Twitter</a>
+        <a class="btn outline" href="https://t.me/SLICKFOXTOKEN" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn" href="https://moonshot.com/BfcoJJm7z3LDobBkBFpMXMaFEfEph9PQTPSGG8e7moon?ref=zv8WLTOQnU" target="_blank" rel="noopener">Buy on Moonshot</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">🦊 The Fox Runs the Forest</span>
+        <h1>Meet <span style="color:var(--accent)">$SFOX</span> — the slick, meme-powered Solana token built by the pack.</h1>
+        <p class="lead">Zero Tax • Anti-Bot • <strong>15% Creator Fee Share</strong>. We’re here to have fun, build loud, and run fast. Join the Fox Den and ride the curve.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://moonshot.com/BfcoJJm7z3LDobBkBFpMXMaFEfEph9PQTPSGG8e7moon?ref=zv8WLTOQnU" target="_blank" rel="noopener">🚀 Buy $SFOX</a>
+          <a class="btn outline" href="#how">How to Buy</a>
+          <a class="btn outline" href="#tokenomics">Tokenomics</a>
+        </div>
+        <div class="badge-row">
+          <span class="stat">⚡ Solana • Fast & Low Fees</span>
+          <span class="stat">🛡️ Liquidity: Planned Lock</span>
+          <span class="stat">🎨 Meme Culture First</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img class="logo" src="assets/sfox-logo.svg" alt="$SFOX logo large" />
+        <div class="mb-8"><strong>Ticker:</strong> $SFOX</div>
+        <div class="mb-8"><strong>Chain:</strong> Solana (Moonshot)</div>
+        <div class="mb-8"><strong>Status:</strong> Live • Fair Launch</div>
+        <a class="btn" href="https://moonshot.com/BfcoJJm7z3LDobBkBFpMXMaFEfEph9PQTPSGG8e7moon?ref=zv8WLTOQnU" target="_blank" rel="noopener">Open on Moonshot</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Why the Fox?</h2>
+      <p class="sub">We keep it simple: fair, fast, and fun. $SFOX is built for culture and community momentum.</p>
+      <div class="grid-3">
+        <div class="card"><h3>Zero Tax</h3><p>No buy/sell taxes. Keep more of what you hunt.</p></div>
+        <div class="card"><h3>Anti-Bot Launch</h3><p>Fair buys for real people. We want a community, not snipers.</p></div>
+        <div class="card"><h3>15% Creator Fee Share</h3><p>Creator fees fuel growth, promos, and community rewards—transparent and targeted.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tokenomics">
+    <div class="container">
+      <h2>Tokenomics</h2>
+      <p class="sub">Clear, straightforward distribution designed to power the den.</p>
+      <table class="tok-table">
+        <tr><td>Supply</td><td>1,000,000,000 $SFOX</td></tr>
+        <tr><td>Liquidity & Market</td><td>70% (initial liquidity + market making)</td></tr>
+        <tr><td>Community Rewards</td><td>10% (memes, contests, raids)</td></tr>
+        <tr><td>Growth & Dev Fund</td><td>10% (marketing, listings, tools) — multisig</td></tr>
+        <tr><td>Team (Vested)</td><td>10% (linear unlock over 6–12 months)</td></tr>
+      </table>
+      <p class="sub"><em>*Edit these numbers to match your final on-chain allocations.</em></p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <h2>How to Buy $SFOX</h2>
+      <p class="sub">Grab your bag in minutes on Moonshot (Solana).</p>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><strong>Get a Wallet.</strong> Install Phantom (mobile or desktop).</div>
+        <div class="step"><span class="num">2</span><strong>Fund with SOL.</strong> Buy SOL on an exchange and send to Phantom.</div>
+        <div class="step"><span class="num">3</span><strong>Open Moonshot.</strong> Use the button below to jump straight to $SFOX.</div>
+        <div class="step"><span class="num">4</span><strong>Swap & Join.</strong> Buy $SFOX and hop into the Fox Den on Telegram.</div>
+      </div>
+      <div class="center" style="margin-top:22px">
+        <a class="btn" href="https://moonshot.com/BfcoJJm7z3LDobBkBFpMXMaFEfEph9PQTPSGG8e7moon?ref=zv8WLTOQnU" target="_blank" rel="noopener">Buy on Moonshot</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="container">
+      <h2>Roadmap</h2>
+      <p class="sub">Memes now. Momentum next. Utility as we scale.</p>
+      <div class="road">
+        <div class="milestone done">
+          <strong>Phase 1 — Launch</strong>
+          <ul>
+            <li>Token live on Moonshot</li>
+            <li>Website + socials + Fox Den</li>
+            <li>Initial meme drops & raids</li>
+          </ul>
+        </div>
+        <div class="milestone">
+          <strong>Phase 2 — Momentum</strong>
+          <ul>
+            <li>Micro-influencer push</li>
+            <li>Weekly contests & meme bounties</li>
+            <li>Liquidity lock & transparency hub</li>
+          </ul>
+        </div>
+        <div class="milestone">
+          <strong>Phase 3 — Expansion</strong>
+          <ul>
+            <li>Simple NFT/merch tie-ins</li>
+            <li>Listings outreach</li>
+            <li>Community-governed growth fund</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details><summary>Is there a tax?</summary><p>No. $SFOX trades with zero buy/sell tax.</p></details>
+      <details><summary>What’s the 15% Creator Fee Share?</summary><p>A portion of creator fees is earmarked for growth—marketing, community rewards, and tooling. We’ll publish regular updates on usage.</p></details>
+      <details><summary>Is liquidity locked?</summary><p>Planned post-launch. We’ll announce the lock and publish the transaction link.</p></details>
+      <details><summary>Where’s the community?</summary><p>Telegram (Fox Den) and Twitter. Join, meme, raid, repeat.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div class="brand">
+        <img src="assets/sfox-logo.svg" alt="$SFOX logo small" />
+        <div>
+          <strong>$SFOX — SlickFoxToken</strong><br/>
+          <span>© <span id="y"></span> The Fox Den. All vibes, no promises. NFA/DYOR.</span>
+        </div>
+      </div>
+      <div class="socials">
+        <a class="chip" href="https://x.com/SlickFoxToken" target="_blank" rel="noopener">Twitter</a>
+        <a class="chip" href="https://t.me/SLICKFOXTOKEN" target="_blank" rel="noopener">Telegram</a>
+        <a class="chip" href="https://moonshot.com/BfcoJJm7z3LDobBkBFpMXMaFEfEph9PQTPSGG8e7moon?ref=zv8WLTOQnU" target="_blank" rel="noopener">Buy $SFOX</a>
+      </div>
+    </div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
